@@ -183,6 +183,7 @@ body {
 
             /* boton movil */
             .header__menu-button {
+                background-color: #4caf50;
                 display: block;
                 width: 2rem;
                 height: 2rem;
@@ -256,3 +257,106 @@ body {
         }
     }
 }
+
+/* ========================================
+   MEDIA QUERIES PARA ADAPTABILIDAD 
+======================================== */
+
+/* RESPONSIVE GRID PARA TABLET  @media (min-width: 768px) {*/
+@media (min-width: 768px) {
+    .portfolio {
+        .header {
+            .header__container {
+                .header__menu-button {
+                    display: none;
+                }
+
+                .nav {
+                    position: static;
+                    transform: none;
+                    opacity: 1;
+                    visibility: visible;
+                    box-shadow: none;
+                    background: transparent;
+
+                    .nav__list {
+                        display: flex;
+                        padding: 0;
+                        gap: var(--spacing-lg);
+
+                        .nav__item {
+                            border: none;
+
+                            .nav__link {
+                                padding: var(--spacing-sm) var(--spacing-md);
+                                border-radius: var(--radius-3xl);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+       
+    }
+}
+/* RESPONSIVE GRID PARA DESKTOP */
+@media (min-width: 1024px) {
+    .portfolio {
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+
+        .header {
+            display: flex;
+            align-items: center;
+            width: 100vw;
+
+            .header__container {
+                width: 100%;
+
+                .header__logo {
+                    width: 350px;
+                    gap: 20px;
+                    display: flex;
+
+                    a {
+                        img {
+                            width: 100%;
+                            transition: transform var(--transition-normal);
+                        }
+                    }
+                }
+
+                .nav {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+        }
+
+        .main {
+            .about {
+
+                /* background-color: var(--color-terceary); */
+                .about__container {
+                    .about__header {
+                        grid-template-columns: repeat(2, 1fr);
+
+                        .about__image {
+                            width: 550px;
+                            height: 550px;
+                        }
+                    }
+
+                    .about__bottom {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}
+
