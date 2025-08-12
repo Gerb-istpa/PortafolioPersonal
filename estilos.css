@@ -258,7 +258,7 @@ body {
   }
 
   /* ========================================
-   MAIN CONTENT ÁREA
+   MAIN CONTENT ÁREAs
   ======================================== */
   .main {
     grid-area: main;
@@ -1191,11 +1191,10 @@ body {
   /* estos 2 siempre sobran xk son del main y del portafolio */
 }
 
+<<<<<<< HEAD
 
-/** ========================================
-   MEDIA QUERIES PARA ADAPTABILIDAD 
-======================================== */
-@media (max-width: var(--breakpoint-sm)) {
+
+@media (max-width: 640px) {
   :root {
     --font-size-5xl: 2.25rem;
     --font-size-4xl: 1.875rem;
@@ -1220,6 +1219,8 @@ body {
   }
 }
 
+=======
+>>>>>>> ea3b4ae1c70e2759c82a20ef0c37b5b91e331063
 @media (min-width: 640px) {
   .portfolio {
     .main {
@@ -1228,7 +1229,6 @@ body {
           .hero__title {
             font-size: var(--font-size-5xl);
           }
-
           .hero__buttons {
             flex-direction: row;
             justify-content: center;
